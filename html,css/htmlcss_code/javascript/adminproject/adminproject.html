@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Admin Page</title>
+    <!--부트스트랩 사용을 위한 코드 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="adminproject.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <div id="new_production">
+            <h3 class="mt-5 mb-3">신규 등록 상품</h3> 
+            <h3 id="date"></h3>
+        </div>
+        
+ 
+            <a href="https://github.com/youngkwangjoo/1----" target="_blank" >
+                <img src="images.png"  class="rounded float-end" alt="git hub profile">    
+            <a>
+                
+        <form class="row row-cols-lg-auto g-3 align-items-center">      
+            <div class="col-12">
+                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                <select class="form-select" id="inlineFormSelectPref">
+                    <option value="category">카테고리</option>
+                    <option value="top">상의</option>
+                    <option value="bottom">하의</option>
+                    <option value="shose">신발</option>
+                    <option value="fashion goods">패션잡화</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <input type="text" placeholder="&nbsp;제품명을 입력해주세요">
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary btn-sm" id="search_btn">조회</button>
+                <button type="button" class="btn btn-danger btn-sm" id="delete_btn">삭제</button>
+            </div>
+        </form>
+        <div class="container mt-3">
+            <table class="table table-striped-columns" >
+                <thead>
+                    <td><input class="form-check-input" type="checkbox" id="checkAll"></td>
+                    <th>
+                        <div class="d-flex align-items-center">
+                            <span>카테고리</span>
+                            <select class="form-select form-select-sm ms-2" aria-label="카테고리 선택" style="width: 1px;">
+                                <option value="all">전체</option>
+                                <option value="top">상의</option>
+                                <option value="bottom">하의</option>
+                                <option value="shoes">신발</option>
+                                <option value="fashion_goods">패션잡화</option>
+                            </select>
+                        </div>
+                    </th>
+                    </th>
+                    <th>
+                    <div class="d-flex align-items-center">
+                        <span>브랜드</span>
+                        <select class="form-select form-select-sm ms-2" aria-label="카테고리 선택" style="width: 1px;">
+                            <option value="all">전체</option>
+                            <option value="suprime">Suprime</option>
+                            <option value="DIESEL">DIESEL</option>
+                            <option value="NIKE">NIKE</option>
+                            <option value="MUSIC&GOODS">MUSIC&GOODS</option>
+                        </select>
+                    </th>
+                    <th>
+                    <div class="d-flex align-items-center">
+                        <span>성별</span>
+                        <select class="form-select form-select-sm ms-2" aria-label="카테고리 선택" style="width: 1px;">
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                    </th>
+                    <th>상품명</th>
+
+                    <th>가격</th>
+                </thead>
+                <tbody id="data-table" >
+                    <!-- 추후 크롤링한 데이터가 들어가는 자리 -->
+                </tbody>
+            </table>
+        </div>
+        <div id="pagination" >
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="adminproject.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

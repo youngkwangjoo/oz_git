@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chareset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>문서의 제목</title>
+        <style>
+            /* 기호와 함께 사용하는 속성 선택자
+            * : 값의 포함여부
+            ^ : 값의 시작여부
+            $ : 값의 끝 여부
+            ex) width *="5"로하면 width 에 5가 들어가있는게 다 포함됨 */
+            
+            /* img[alt]{
+                border: 5px dashed red;
+            } */
+            img[alt]{
+                border: 5px dashed red;
+            }
+            /* 바디에 포함된 p라는 요소 몇단계 밑에있더라도 사용할수있음 */
+            body em{
+                color: blue;
+            }
+            /* 
+            body >em 으로 할 경우 em이 두단계 아래라 자식요소 포함인 >는 안통함
+            p >em  으로 할경우 바로 밑단계가 때문에 자식요소가 가능함
+            */
+            #sam ~ p{
+                color: orange;
+            }
+            /* sam이라는 녀석과 인접한 형제 요소 p1의 색이 바뀐다
+            모든 형제를 선택할때는 ~p로 선택한다
+            인접한 형제는 + 
+            주의 사항) 형제 선택자는 뒤 이어서 나오는 형제만 적용 */
+
+        </style>
+    </head>
+    <body>
+        <img src="images/복어.png" width="250" id="복어">
+        <img src="images/복어.png" width="250" >
+        <img src="images/복어.png" width="250" id="sam">
+        <p>복어는 민물복어로 인디언 복어라는 별명이 있다.</p>
+        <p>복어는 구피들과 같이살고 있지만 무얼 먹는지는 아직도 모른다</p>
+        <p>복어는 육식성이라고 하지만 <em>새우</em>에게도 도망가는 약골이다</p>
+        <p>복어는 내 어항에 있는 하나뿐인 반려어다</p>
+    </body>
+</html>

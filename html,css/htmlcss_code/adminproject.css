@@ -1,0 +1,16 @@
+#search{
+    width: 50px;
+    padding-top: 5px;
+    float: both;
+}
+
+#container mt-3{
+
+    display: none;
+}
+.col-auto{
+    position: relative;
+    right: 50px;
+    top: 50px;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        let monsterHP = 10000
+        const container = document.getElementById("container")
+        const h1 = document.createElement("h1")
+        h1.textContent = "몬스터 잡기를 시작합니다!"
+        container.appendChild(h1)
+
+        let attackdamege = parseInt(prompt("당신의 공격력은 몇인가요"))
+        let attackcount = 0
+
+        if(attackdamege > 0){
+
+            while(monsterHP > 0){
+                monsterHP -= attackdamege //체력감소
+                attackcount += 1 
+            
+            const p = document.createElement("p")
+            p.textContent = `몬스터를 ${attackcount}회 공격했다!`
+            container.append(p)
+
+            const strong = document.createElement("strong")
+                strong.textContent = `몬스터의 남은 hp는 ${monsterHP}입니다`
+                container.append(strong)
+            }
+
+            }
+            const h2 = document.createElement("h2")
+            h2.textContent = "몬스터가 죽었습니다."
+            h2.style.color = "red"
+            h2.title = "게임을 다시 시작하려면~"
+            container.appendChild(h2)
+
+        }else{
+            alert("데미지를 가할 수 없어 게임이 취소됩니다.")
+
+        }
+    </script>
+</body>
+</html>

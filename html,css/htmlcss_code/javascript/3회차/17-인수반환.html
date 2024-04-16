@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script> 
+
+        console.log(paragraph("첫번쨰 문단,와우", "red"))
+        console.log(paragraph("두번쨰 문단도 여기있어", "green"))
+        console.log(paragraph("세번쨰 문단도 있잖아?"))
+
+        function paragraph( content, color ){
+        const p = document.createElement("p")
+        p.style.color = color
+        p.textContent = content
+        document.querySelector("#container").append(p)
+        
+        return `방금 만든 태그의 컨텐츠 : ${content}, 색상: ${color}`
+    
+        }
+
+        function sample(){
+            console.log("반환기능 테스트")
+
+            return"어려워"
+        }
+        console.log(sample())
+        //리턴위로만 쓸것
+    </script>
+</body>
+</html>

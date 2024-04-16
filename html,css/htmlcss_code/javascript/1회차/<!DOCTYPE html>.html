@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+    <style>
+        /* 스타일링은 선택 사항입니다. */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>회원가입 폼</h2>
+
+<form action="/submit_registration_form" method="post">
+    <label for="username">사용자명:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" required>
+
+    <input type="submit" value="가입">
+</form>
+
+</body>
+</html>
+이 코드는 간단한 HTML 폼을 만들어줍니다. 사용자명, 이메일, 비밀번호를 입력할 수 있도록 되어 있습니다. 사용자가 정보를 입력하고 "가입" 버튼을 클릭하면 /submit_registration_form으로 데이터가 전송됩니다. 이 코드를 사용하여 웹 페이지에 회원가입 폼을 추가할 수 있습니다. 필요에 따라 스타일링이나 추가적인 기능을 구현할 수 있습니다.
+
+
+
+
+User
+기가 막히는구나..
+ChatGPT
+감사합니다! 만약 추가적인 도움이 필요하거나 다른 질문이 있으시면 언제든지 물어주세요. 도움이 될 때마다 제가 여기 있어 도와드릴 준비가 되어 있습니다!
+
+User
+설문조사 양식 만들어줘
+ChatGPT
+확실히! 아래는 간단한 설문조사 양식을 만드는 HTML 코드입니다. 이 코드를 사용하여 설문조사를 생성할 수 있습니다. 각 질문에 대한 답변 형식을 선택하고 필요에 따라 추가하거나 수정할 수 있습니다.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 양식</title>
+    <style>
+        /* 스타일링은 선택 사항입니다. */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>설문조사</h2>
+
+<form action="/submit_survey" method="post">
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="age">나이:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="gender">성별:</label>
+    <select id="gender" name="gender" required>
+        <option value="">성별을 선택하세요</option>
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+        <option value="other">기타</option>
+    </select>
+
+    <label for="feedback">의견:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+    <input type="submit" value="제출">
+</form>
+
+</body>
+</html>

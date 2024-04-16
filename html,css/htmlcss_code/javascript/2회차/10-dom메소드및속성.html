@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0</title>
+</head>
+<body>
+
+    <h1 id="song-title" class="heading"
+    title="이무진의 리메이크버전">
+        <span> 비와 당신 </span>
+    </h1>
+    <p class="lyrics">이젠 당신이 그립지 않죠</p>
+    <p>보고 싶은 마음도 없죠 </p>
+   
+    <script>
+        console.log(document.querySelectorAll(".lyrics"))
+        //query뒤에 all을 붙이면 기존과 다르게 전부 가져오고 콘솔에 
+        //인덱스화되어서 표시가된다
+        console.log(
+        document.getElementsByClassName("lyrics")
+        )
+        //이거도 요소가 여러개 선택된다
+        const title = document.getElementById("song-title")
+        //고유한 식별자로 선택되는 특징을 갖는다.
+        //어떤걸 선택하든 상관은없다. 
+
+        console.log(title.textcontent)
+        console.log(title.innertext)
+        //텍스트 콘텐츠는 코드상에 공백도 포함해서 콘솔에 표현함
+        console.log(title.className)
+        console.log(title.style)
+        //정의된 스타일값을 나열한다.정의된게없어서 엄청 나오는거
+        console.log(title.title)
+
+    </script>
+</body>
+</html>

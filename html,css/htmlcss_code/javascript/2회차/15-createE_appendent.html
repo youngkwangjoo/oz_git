@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+   
+    <div id="container">
+
+    <!-- 이사이에 태그를 더 넣기 위해 스크립트에서 방법을 쓸 예정이다.  -->
+    </div>
+
+    <script>
+
+        for(let a = 1; a <= 5; a+= 1){
+        const div = document.getElementById("container")
+
+        const box = document.createElement("div")
+        console.log(box)
+        box.style.color = "blue"
+        // 자바에서 색은 문자열로 지정해야해서 앞뒤 따옴표한다
+        box.style.width = "200px"
+        box.style.height = "200px"
+        box.style.color = "blue"
+        box.textContent= "헷갈리지만 신기하고 재밌다"
+
+        div.appendChild(box)
+        //append(box)를 사용하면 콘솔에서는 반환이 안되어 undefined가 뜬다. 
+        }
+
+
+
+
+    </script>
+</body>
+</html>

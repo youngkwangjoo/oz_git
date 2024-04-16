@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 & 이벤트 핸들링</title>
+</head>
+<body>
+    <button id="span">span</button>
+    <button id="strong">strong</button>
+    <button id="mark">mark</button>
+    <hr>
+
+    <script>
+        const spanBtn = document.getElementById("span")
+        const strongBtn = document.getElementById("strong")
+        const markBtn = document.getElementById("mark")
+
+        
+        /*function handleclick(){
+            alert("클릭했어요")
+        }
+
+        spanBtn.onclick = handleclick*/
+        //핸들클릭 뒤에 소괄호를 붙이면 시작하자마자 바로 등장함
+
+        // spanBtn.handleclick = function(){
+        //     const span = document.createElement("span")
+        //     span.textContent = "새로생긴 스판 태그입니다"
+        //     document.body.append(span)
+
+        
+
+        // spanBtn.addEventListener("click", function(){
+        //     const span = document.createElement("span")
+        //     span.textContent = "새로생긴 스판 태그입니다"
+        //     document.body.append(span)
+        // })
+        const handleclick = function(event){
+            
+            if(event.target.id == "span"){
+                const span = document.createElement("span")
+                span.textContent = "span 태그"
+                document.body.append(span)
+            }else if(event.target.id == "strong"){
+                const strong = document.createElement("strong")
+                strong.textContent = "strong 태그"
+                document.body.append(strong)
+            }else if(event.target.id == "mark"){
+                const mark = document.createElement("mark")
+                mark.textContent = "mark 태그"
+                document.body.append(mark)
+
+        }
+    }
+        spanBtn.addEventListener("click", handleclick)
+        strongBtn.addEventListener("click", handleclick)
+        markBtn.addEventListener("click", handleclick)
+    </script>
+</body>
+</html>

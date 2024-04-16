@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chareset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>문서의 제목</title>
+        <style>
+            /* 블록유형은 기본적으로 크기조절도 되고 독자적인 크기를 가지고있는데
+            인라인은 그부분만 변경이 가능한 작은 부분이다. p는 블록유형인데 여기에 
+            디스플레이 인라인이 들어가면 인라인요소로 바뀌어서 블록이 없어지고
+            세로로있던게 가로로 변하면서 인라인요소가된다 */
+            p{
+                display: none;
+                width: 100px;
+                height: 100px;
+            }
+            span{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <p>경제</p>
+        <p>정치</p>
+        <p>과학</p>
+        <p>생활</p>
+        <span>하하</span>
+    </body>
+</html>

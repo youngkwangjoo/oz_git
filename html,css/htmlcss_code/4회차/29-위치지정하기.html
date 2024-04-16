@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chareset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>문서의 제목</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: orange;
+            }
+            .rel{
+                background-color: red;
+                position: relative;
+                top: 50px;
+                left: 50px;
+                }
+                /* 원래 있어야할 문서의 흐름을 무시하는 abs는 원래 없는것처럼 제외되어서
+                234번이 한칸 위로 올라간다.
+                abs는 포지션속성을 갖는 요소를 기준으로 위치를 이동한다 
+                단, 상위요소중에 포지션 속성을 가진 요소가없다면
+                그냥 화면을 기준으로 이동한다. 이건 어려우니 따로 연습해볼것 */
+            .abs{
+                position: absolute;
+                right: 50px;
+                top: 50px;
+            }
+            .scroll{
+                height: 2000px;
+            }
+            /* 화면 스크롤을 이동해도 움직이지않고 항상 그곳에있음 */
+            .fixed{
+                position: fixed;
+                right: 50px;
+                bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="abs">1</div>
+        <div class="rel">2</div>
+        <div class="scroll">3</div>
+        <div class="fixed">4</div>
+        
+    </body>
+</html>

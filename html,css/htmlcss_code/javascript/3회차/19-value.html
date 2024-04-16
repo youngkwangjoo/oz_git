@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = talk>
+    <input id = "push" type="button" value="push">
+
+    <form id = "form">
+        <input name="name">
+        <input name="nick">
+        <input type="submit">
+
+    </form>
+
+    <script>
+       /* 
+       const input = document.getElementById("talk")
+        const button = document.getElementById("push")
+
+        input.addEventListener("keyup", function(e){
+            console.log(e.target.value)
+        })
+        // 콘솔에 글자 입력 모든 순간이 기록됨
+        
+
+        button.addEventListener("click", function(){
+            const p = document.createElement("p")
+            p.textContent = input.value
+            document.body.append(p)
+            //푸시 누르면 입력한 글자가 반복되서 나옴
+
+            //input.value = "버튼눌러서 써짐" 하면 버튼누르면 네모칸에 글씨써짐
+        })
+*/
+   
+        const form = document.getElementById("form")
+        form.addEventListener("submit", function(event){
+            event.preventDefault()
+            const p = document.createElement("p")
+            p.textContent = `${event.target.name.value}의 별명은
+            ${event.target.nick.value}`
+            document.body.append(p)
+        })
+        
+        
+    </script>
+</body>
+</html>

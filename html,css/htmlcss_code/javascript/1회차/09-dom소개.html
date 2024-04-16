@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0</title>
+</head>
+<body>
+    <p>대한민국의 역습입니다!</p>
+    <p class="comment">징동 따운!!!! lpl비상!!!!</p>
+    <p class="comment" id="goal">고척돔 나와!!! 뉴진스 나와!!!!</p>
+    <script>
+        // 입력-처리-출력 
+        const p1 = document.querySelector("p")
+        console.log(p1.textContent)
+        p1.textContent = "lpl의 역습입니다"
+        // 이건 그거야 기존 html로 웹페이지에 나온걸 자바가 중간에 바꾸는거야 
+        //기존 p를 위에처럼 선언하고 p.textcontent를 원하는걸로 바꿔서 말이지
+        const p2 = document.querySelector("p.comment")
+        console.log(p2.textcontent)
+        p2.textContent = "젠지 다운!! lck 비상!!"   
+        
+        const p3 = document.querySelector("#goal")
+        console.log(p3.textContent)
+        p3.textContent = "쵸비 다운!!! 젠지 비상!!!"
+    </script>
+</body>
+</html>

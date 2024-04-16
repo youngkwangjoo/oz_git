@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="js3task.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id ="container">
+        <form id = "form" action="#">
+        <table class = "table">
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input name="id" placeholder="아이디" autocomplete="off">
+                    <!-- 자동완성이 안되면 좋겟는 곳에 오토컴플릿을 추가하면됨 -->
+                </td>
+            </tr>
+                
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="password" name="pw1" placeholder="비밀번호">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                    <input type="password" name="pw2" placeholder="비밀번호 확인">
+                </td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td>
+                    <input name="name" placeholder="이름" required> 
+                    <!-- required를 이용하면 js에서 조건문 안걸어도 편하게 가능함 -->
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>
+                    <input name="phonenumber" placeholder="010-0000-0000">
+                  
+                </td>
+            </tr>
+            <tr>
+                <th>직업</th>
+                <td>
+                    <select name = "position">
+                        <option value="student">학생</option>
+                        <option value="worker">직장인</option>
+                        <option value="army">군인</option>
+                        <option value="jobseeker">구직자</option>
+                        <option value="etc">기타</option>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>
+                    <label>
+                        <input type="radio" name="gender" value ="male" checked>남자
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value ="female" checked>여자
+                    </label>
+                </td>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <input title="정확한 메일 주소를 입력해주세요" Type = "email" name="email">
+                </td>
+            </tr>
+            
+            <tr>
+                <th>자기 소개</th>
+                <td>
+                    <textarea name = "intro"> </textarea>                    
+                </td>
+            </tr>
+            
+        </table>
+        <div class = "buttons">
+            <input type="submit" value="가입" class="btn" title="가입">
+            <input type="reset" value="리셋" class="btn" title="처음으로">
+        </div>
+        </form>
+    </div>
+      
+
+
+    <script src="js3task.js">
+
+
+    </script>
+</body>
+</html>

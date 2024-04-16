@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chareset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>의사클래스 & 의사요소</title>
+        <style>
+            .menu{
+                padding: 10px;
+                border bottom: 5px solid black;
+            }
+            .menu > li{
+                display: inline-block;
+                text-align: center;
+            }
+            li > a{ 
+                display: inline-block;
+                width: 88px;
+                padding: 10px;
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+                background-color: gray;
+
+            }
+            a:active{
+                color: white;
+                background-color: black;
+            }
+            li:nth-child(2n){
+                font-size: 20px;
+            }
+            /* n은 모든 자연수를 선택하니까 3->n으로 바꾸면 사실상 
+            전체 선택이다. 만약 2n면짝수 2n-1이면 홀수 */
+            
+            /* a::first-letter{
+                color: white;
+            의사요소는 한글자만..  */
+
+            a::after{
+                content: "보기";
+                color : green;
+            }
+            /* after과 before은 많이 사용하니 알아두자 */
+        </style>
+    </head>
+    <body>
+         <ul class="menu">
+            <li><a href="#">사전</a> </li>
+            <li><a href="#">뉴스</a> </li>
+            <li><a href="#">증권</a> </li>
+            <li><a href="#">지도</a> </li>
+            <!-- 갈 링크가 없으면 그냥 하이퍼링그로 #을 걸어두는 편 -->
+         </ul>
+    </body>
+</html>
