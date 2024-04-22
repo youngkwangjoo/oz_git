@@ -1,0 +1,20 @@
+-- update customers set region = 'busan' where customersID = 1;
+-- SET GLOBAL sql_mode = '';
+-- 1) **`customers`** 테이블에서 특정 고객의 주소를 갱신하세요.
+-- UPDATE customers SET region = 'busan' WHERE name = '영의정';
+-- (2) **`products`** 테이블에서 특정 제품의 가격을 갱신하세요.
+-- UPDATE products SET product_name = '매화수' WHERE product_name = '매화수'
+-- (3) **`employees`** 테이블에서 특정 직원의 직급을 갱신하세요.
+-- UPDATE empolyees SET emplyees_name = '홍길동' WHERE emplyees_name = '홍길동'
+-- -- (4) **`offices`** 테이블에서 특정 사무실의 전화번호를 갱신하세요.
+-- UPDATE offices SET offices_name = '경기도 양주시 파천군' WHERE name = '경기도 양주시 파천군'
+-- -- (5) **`orders`** 테이블에서 특정 주문의 상태를 갱신하세요.
+-- UPDATE orders SET customer_id = 'dudrknd1643' WHERE order_date = '2024_01_01'
+-- -- (6) **`orderdetails`** 테이블에서 특정 주문 상세의 수량을 갱신하세요.
+-- UPDATE orderdetails SET orderdetails_etc = '' WHERE orderdetails = ''
+-- -- (7) **`payments`** 테이블에서 특정 지불의 금액을 갱신하세요.
+-- UPDATE payments SET cash = 'cash_info' WHERE credit_care = 'card_info'
+-- -- (8) **`productlines`** 테이블에서 특정 제품 라인의 설명을 갱신하세요.
+-- UPDATE productlines SET shapoo = '' WHERE shapoo = ''
+-- -- (9) **`customers`** 테이블에서 특정 고객의 이메일을 갱신하세요.
+-- UPDATE customers SET email = 'dudrknd1642@email.com' WHERE customerID = 1;

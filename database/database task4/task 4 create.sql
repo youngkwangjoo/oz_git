@@ -1,0 +1,44 @@
+-- use chapter22_23
+-- (1) **`customers`** 테이블에 새 고객을 추가하세요.
+-- create table customers(
+-- name varchar(55))
+-- insert into customers(name) value("주영광")
+-- (2) **`products`** 테이블에 새 제품을 추가하세요.
+-- create table products(
+-- product_name varchar(55))
+-- insert into products(product_name) value("이니스프리 클랜징폼")
+-- (3) **`employees`** 테이블에 새 직원을 추가하세요.
+-- create table empolyees(
+-- emplyees_name varchar(55))
+-- insert into empolyees(emplyees_name) value("홍길동")
+-- (4) **`offices`** 테이블에 새 사무실을 추가하세요.
+-- create table offices(
+-- offices_name varchar(55))
+-- insert into offices(offices_name) value("경기도 양주시 파천군")
+-- (5) **`orders`** 테이블에 새 주문을 추가하세요.
+-- create table orders(
+-- orders_date date,
+-- customers_id varchar(100))
+-- insert into orders(orders_date, customers_id) value("2024-01-01","dudrknd1643")
+-- (6) **`orderdetails`** 테이블에 주문 상세 정보를 추가하세요.
+-- create table orderdetails(
+-- orderdetails_etc varchar(255))
+-- insert into ordersdetails(orderdetails_etc) value ("detail_etc")
+-- (7) **`payments`** 테이블에 지불 정보를 추가하세요.
+-- create table payments(
+-- credit_card varchar(255),
+-- cash varchar(255))
+-- insert into payments(credit_card, cash) value ("card_info", "cash_info")
+-- (8) **`productlines`** 테이블에 제품 라인을 추가하세요.
+-- create table product_lines(
+-- shampoo varchar(55),
+-- form_cleanging varchar(55),
+-- body_wash varchar(55))
+-- insert into product_lines(shampoo, form_cleanging, body_wash) value ("이니스프리샴푸", "이니스프리폼클렌징", "이니스프리 바디워시")
+-- (9) **`customers`** 테이블에 다른 지역의 고객을 추가하세요.
+-- ALTER TABLE customers ADD COLUMN region VARCHAR(100);
+-- use chapter22_23
+-- insert into customers(name, region) value ("영의정", "seoul")
+-- (10) **`products`** 테이블에 다른 카테고리의 제품을 추가하세요.
+-- ALTER TABLE products ADD COLUMN other_product VARCHAR(100);
+insert into products(other_product) value ("매화수")
