@@ -96,16 +96,16 @@ FROM Books
 GROUP BY year;
 -- 출판사가 같은 책들 중 평점 편차가 가장 큰 출판사 찾기
 -- 같은 출판사에서 출판된 책들 중 평점 편차가 가장 큰 출판사와 그 편차를 조회하세요.
-SELECT publisher, MAX(rating) - MIN(rating) as rating_difference
-FROM Books
-GROUP BY publisher
-ORDER BY rating_difference DESC
-LIMIT 1;
+-- SELECT publisher, MAX(rating) - MIN(rating) as rating_difference
+-- FROM Books
+-- GROUP BY publisher
+-- ORDER BY rating_difference DESC
+-- LIMIT 1;
 -- 특정 저자의 책들 중 판매지수 대비 평점이 가장 높은 책 찾기
 -- 특정 저자의 책들 중 판매지수 대비 평점이 가장 높은 책의 제목과 그 비율을 조회하세요.
-SELECT title, rating / sales as ratio
-FROM Books
-WHERE author = '특정 저자'
-ORDER BY ratio DESC
-LIMIT 1;
+-- SELECT title, rating / sales as ratio
+-- FROM Books
+-- WHERE author = '특정 저자'
+-- ORDER BY ratio DESC
+-- LIMIT 1;
 
