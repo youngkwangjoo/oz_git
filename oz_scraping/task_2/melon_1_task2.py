@@ -17,9 +17,11 @@ lst = soup.select(".lst50, .lst100")
 for rank, i in enumerate(lst, 1):
     rank = i.select_one(".rank")
     title = i.select_one(".ellipsis.rank01 a")#el이랑 ran안에 있는 a 태그를 선택함
-    singer = i.select_one(".ellipsis.rank02")
+    singer = i.select_one(".checkEllipsis")#.ellicsis.rank02
     album = i.select_one(".ellipsis.rank03")
     print(f"[순위] {rank.text}")
     print(f"제목 : {title.text}") 
     print(f"가수 : {singer.text}")
-    print(f"앨범 : {album.text}")
+    x = "".join(album.text.splitlines())
+    print(f"앨범 : {x}")
+    print(sep="/")

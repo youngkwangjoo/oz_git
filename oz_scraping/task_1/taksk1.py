@@ -25,7 +25,7 @@ for user, names, name in zip(blog_users, blog_names, blog_name):
     else:
         print(f" 저자 : {name.text}")
         print(f" 제목 : {names.text}")
-        print(sep="/")
+
 #users 와 names를 합쳐보려 했으나 애초에 코드 작동방식이 user에 광고 클래스가 있으면 스킵하는 코드이기 때문에 그냥 따로했음
 
 #     #유저박스를 가져올때 class spblog 가 포함되어있다면 false 아니라면 그아래 제목을 가져온다?
