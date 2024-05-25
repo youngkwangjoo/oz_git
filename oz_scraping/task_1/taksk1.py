@@ -1,3 +1,4 @@
+#목표 : 유산균으로 검색해서 나오는 블로그 글 중 광고 마크가 붙지 않은 블로그의 제목과 작성자를 출력해주세요
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,9 +16,9 @@ html = req.text
 soup = BeautifulSoup(html, "html.parser")
 
 # blog_users = soup.select(".user_box")
-blog_users = soup.select(".user_box")
-blog_names = soup.select(".title_link")
-blog_name = soup.select(".name")
+blog_users = soup.select(".user_box")# 큰상자
+blog_names = soup.select(".title_link")# 블로그제목
+blog_name = soup.select(".name")# 작성자
 
 for user, names, name in zip(blog_users, blog_names, blog_name):
     if user.find(class_="spblog ico_ad"):
@@ -25,6 +26,7 @@ for user, names, name in zip(blog_users, blog_names, blog_name):
     else:
         print(f" 저자 : {name.text}")
         print(f" 제목 : {names.text}")
+        print(sep="/")
 
 #users 와 names를 합쳐보려 했으나 애초에 코드 작동방식이 user에 광고 클래스가 있으면 스킵하는 코드이기 때문에 그냥 따로했음
 

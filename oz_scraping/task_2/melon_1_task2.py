@@ -1,3 +1,4 @@
+#목표 : lst50, lst100, lst_all을 find_all을 이용해 한줄로 작성해주세요
 import requests
 from bs4 import BeautifulSoup
 
@@ -17,11 +18,10 @@ lst = soup.select(".lst50, .lst100")
 for rank, i in enumerate(lst, 1):
     rank = i.select_one(".rank")
     title = i.select_one(".ellipsis.rank01 a")#el이랑 ran안에 있는 a 태그를 선택함
-    singer = i.select_one(".checkEllipsis")#.ellicsis.rank02
-    album = i.select_one(".ellipsis.rank03")
+    singer = i.select_one(".checkEllipsis")#.ellicsis.rank02,#checkEllipsis
+    album = i.select_one(".ellipsis.rank03 a")
     print(f"[순위] {rank.text}")
     print(f"제목 : {title.text}") 
     print(f"가수 : {singer.text}")
-    x = "".join(album.text.splitlines())
-    print(f"앨범 : {x}")
+    print(f"가수 : {album.text}")
     print(sep="/")
