@@ -54,7 +54,7 @@ for i in ele:
     print(sep="/")
 
 
-driver.quit
+driver.quit()
 #find_elements는 왜 .text가 안되는것인가...
 
 
