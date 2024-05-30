@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "code -"
+version = "0.1.0"
+description = ""
+authors = ["youngkwangjoo <dudrknd1642@gmail.com>"]
+readme = "README.md"
+packages = [{include = "code "}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
