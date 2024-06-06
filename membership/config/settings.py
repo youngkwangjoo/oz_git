@@ -42,6 +42,7 @@ CUSTOM_USER_APPS = [
     'addresses.apps.AddressesConfig',  
     'accounts.apps.AccountsConfig',
     'rest_framework',
+    "rest_framework.authtoken",
 ]
 
 INSTALLED_APPS = DJANGO_SYSTEM_APPS + CUSTOM_USER_APPS
@@ -129,3 +130,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication', # 추가
+    ],
+}

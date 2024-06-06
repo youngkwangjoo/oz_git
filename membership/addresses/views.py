@@ -3,14 +3,20 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Address
 from .serializers import AddressSerializer
+from rest_framework.authentication import TokenAuthentication # 사용자 인증 (추가)
+from rest_framework.permissions import IsAuthenticated 
 
 class AddressList(APIView):
+    authentication_classes = [TokenAuthentication] # 추가
+    permission_classes = [IsAuthenticated]
     def get(self, request):
         addresses = Address.objects.all()
         serializer = AddressSerializer(addresses, many=True)
         return Response(serializer.data)
 
 class AddressDetail(APIView):
+    authentication_classes = [TokenAuthentication] # 추가
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Address.objects.get(pk=pk)
