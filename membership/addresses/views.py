@@ -68,3 +68,8 @@ class DeleteAddress(APIView):
             return Response({'error': 'Address not found'}, status=status.HTTP_404_NOT_FOUND)
         address.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+#     {
+#     "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxODk1MzUxNCwiaWF0IjoxNzE3NzQzOTE0LCJqdGkiOiIyN2QzZjI4ZjdhY2M0N2QyYWQzMzk4ZWZkOTU2OGU3ZSIsInVzZXJfaWQiOjZ9.A2pgczB5CgPfb0qH8DS4iO0OPbl3XHlIYi-aWUO_PPE",
+#     "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NzQ3NTE0LCJpYXQiOjE3MTc3NDM5MTQsImp0aSI6IjY4NDNkY2YyZmY4NTQ1YjU4ODI1Mjk4NzgxZmRmNDExIiwidXNlcl9pZCI6Nn0.jQtuUoUP0bDtVkylOl3qqQ7oHm72zNpCAmYuE8bC65U"
+# }

@@ -10,10 +10,7 @@ class FeedSerializer(ModelSerializer):
 					# Feed - User 모델 => 현재 코드는 Feed 모델 객체를 직렬화 하고 있지만,
 					# depth = 1 이라는 코드를 통해 User 객체도 직렬화하겠다는 뜻.
         depth = 1 # objects도 serialize화 시킴
-# class FeedListSerializer(ModelSerializer):
-#     class Meta:
-#         model = Feed
-#         fields = ("id", "user", "title", "content")\
-
-
-
+class FeedListSerializer(ModelSerializer):
+    class Meta:
+        model = Feed
+        fields = ("id", "user", "title", "content")
